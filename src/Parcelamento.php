@@ -40,6 +40,12 @@ class Parcelamento
         return $this->http->get('/installments/' . $id);
     }
 
+    // Retorna as cobranças de um parcelamento de acordo com o Id do parcelamento
+    public function getPaymentsById($id)
+    {
+        return $this->http->get("/installments/{$id}/payments");
+    }
+
     // Retorna os dados da cobrança de acordo com o Id
     public function getBeefPdf($id)
     {
