@@ -41,9 +41,9 @@ class Parcelamento
     }
 
     // Retorna as cobranças de um parcelamento de acordo com o Id do parcelamento
-    public function getPaymentsById($id)
+    public function getPaymentsById($id, $limit = 12)
     {
-        return $this->http->get("/installments/{$id}/payments");
+        return $this->http->get("/installments/{$id}/payments?limit={$limit}");
     }
 
     // Retorna os dados da cobrança de acordo com o Id
